@@ -1,0 +1,130 @@
+﻿<%@ Master Language="VB" CodeFile="StaticMaster.master.vb" Inherits="SiteMaster_StaticMaster" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="Ajax" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+     <link rel="shortcut icon" href="../images/KarKop.ico" />
+     <link href="../App_Themes/Koppal/Koppal.css" rel="stylesheet" type="text/css" />
+     <link rel="stylesheet" type="text/css" href="../App_Themes/templatemo_style.css" />
+     <title>Karnik-Bagalkot</title>
+     
+     <asp:ContentPlaceHolder id="head" runat="server">
+     </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+<div>
+
+    <div>
+    <div class="headerbg" style="width:100%;"></div>
+    </div>
+    
+    <center><table><tr><td><asp:ScriptManager ID="src" runat="server" ></asp:ScriptManager></td>
+        <td><Ajax:TextBoxWatermarkExtender ID="txtwUser" runat="server" TargetControlID="txtUser" WatermarkText="User Name"></Ajax:TextBoxWatermarkExtender></td>
+        <td><Ajax:TextBoxWatermarkExtender ID="txtwPwd" runat="server" TargetControlID="txtPwd" WatermarkText="Password"></Ajax:TextBoxWatermarkExtender></td>
+        </tr></table></center>
+        
+        <div class="headermenu" style="z-index:9999;">
+            <asp:Menu ID="mnuMain" runat="server" Width="350px" Orientation="Horizontal" StaticSubMenuIndent="10px">
+            <StaticSelectedStyle BackColor="#B6BFC6" />
+            <StaticMenuItemStyle HorizontalPadding="15px" VerticalPadding="2px" />
+            <DynamicHoverStyle BackColor="#B6BFC6" ForeColor="#405086" />
+            <DynamicMenuStyle BackColor="#B6BFC6" />
+            <DynamicSelectedStyle BackColor="#B6BFC6" />
+            <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+            <StaticHoverStyle BackColor="#B6BFC6" ForeColor="405086" />
+            <Items>
+            <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/frmLogin.aspx">
+                <asp:MenuItem Text="AboutUs" Value="AboutUs" NavigateUrl="~/frmAbout.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Governing Body Members" Value="Governing Body Members" NavigateUrl="~/frmLogin.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Trainings" Value="Trainings" NavigateUrl="~/frmLogin.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Productions" Value="Productions" NavigateUrl="~/frmLogin.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Photo Gallery" Value="Photo Gallery" NavigateUrl="~/frmPhoto.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="KSR Act 1960 and ByLaws" Value="KSR Act 1960 and ByLaws" NavigateUrl="~/frmAbout.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Engineer Details" Value="Engineer Details" NavigateUrl="~/frmLogin.aspx"></asp:MenuItem>
+            </asp:MenuItem>
+            
+            <asp:MenuItem Text="Technologies" Value="Technologies" NavigateUrl="~/frmConstruct.aspx"></asp:MenuItem>            
+            <asp:MenuItem Text="Projects" Value="Projects Abstract" NavigateUrl="~/frmLogin.aspx"></asp:MenuItem>            
+            <asp:MenuItem Text="Contacts" Value="Contacts" NavigateUrl="~/frmConstruct.aspx"></asp:MenuItem>
+            </Items>
+            </asp:Menu>
+		</div>
+		
+		<div class="headertxt">
+		<table><tr>
+			<td><asp:TextBox ID="txtUser" runat="server" Height="9px" Width="100px" Font-Size="7pt"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtPwd" runat="server" Height="9px" Width="100px" Font-Size="7pt" TextMode="Password"></asp:TextBox></td>
+            <td><asp:Button ID="btnLogin" runat="server" Text="Login" Height="18px" Width="50px" Font-Size="7pt" /></td>
+            <td><asp:Label ID="lblmsg" runat="server" ></asp:Label></td></tr></table>
+		</div>
+
+	<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">        
+    </asp:ContentPlaceHolder>
+    
+    <br />
+    <br />
+    </div>
+
+    <div id="templatemo_footer_wrapper">
+<center>
+<div id="templatemo_footer">
+
+    <center>
+        
+        <table width="900px">
+            <tr>
+            <td style="width:200px" valign="top">
+            <h3 style="color: #FFFFFF">Reach Us</h3>        
+            <p>
+            	<%--Bahaddur Bandi Road, Shrishail<br />
+				Nagar, KOPPAL-583231<br />
+				Tel (Off) : <span>08539-221566</span>,<br />
+				 Fax : <span>222306</span><br />
+				E-Mail : <span>koppalnk@yahoo.co.in</span>--%>
+            </td></p>
+            
+            <td style="width:200px" valign="top">
+            <h3 style="color: #FFFFFF">Chairman</h3>        
+            <p>
+            	Deputy Commissioner<br />
+				Bagalkot
+            </p></td>
+            
+            <td style="width:200px" valign="top">
+            <h3 style="color: #FFFFFF;">Executive Chairman</h3>        
+            <p>
+            	Chief Executive Officer<br />
+				Zilla Panchayat<br />
+				Bagalkot
+            </td></p>
+            
+            <td style="width:200px" valign="top">
+            <h3 style="color: #FFFFFF;">Member Secretary</h3>
+            <p>
+            	The Deputy Secretary,<br />
+				(Development) Z.P<br />
+				Bagalkot
+            </td></p>            
+            </tr>        
+        </table>
+        <!-- hitwebcounter Code START -->
+        <a href="http://www.hitwebcounter.com/" target="_blank">
+        <img src="http://hitwebcounter.com/counter/counter.php?page=6026708&style=0006&nbdigits=8&type=ip&initCount=20000" title="m" Alt="m"   border="0" >
+        </a><br/>
+        <!-- hitwebcounter.com --><a href="http://www.hitwebcounter.com/counterresources.php" title="Visits Total" 
+        target="_blank" style="font-family: Arial, Helvetica, sans-serif; 
+        font-size: 11px; color: #9C9E94; text-decoration: none ;"><strong>Visits Total</strong>
+        </a> 
+       </center>
+     </div>
+</center>
+</div>
+
+    </form>
+</body>
+</html>

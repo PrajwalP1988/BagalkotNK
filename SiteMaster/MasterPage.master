@@ -1,0 +1,89 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="SiteMaster_MasterPage" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="Ajax" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link rel="shortcut icon" href="../images/KarKop.ico" />
+    <link href="../App_Themes/Koppal/Koppal.css" rel="stylesheet" type="text/css" />
+    <title>Karnik-Bagalkot</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    
+     <asp:UpdateProgress ID="UpdateProgress1" runat="server">
+        <ProgressTemplate>
+            <div style="position: absolute; vertical-align: middle; top: 90%; left: 40%; z-index: 1">
+                <table>
+                    <tr>
+                        <td>
+                          <img alt ="RGRHCL" src="../images/ajax-loader.png" width="100px" height="100px" /></td>
+                    </tr>
+                </table>
+            </div>
+        </ProgressTemplate>
+    </asp:UpdateProgress>
+    <div class="headerbg"></div>
+    <div style="top: 160px; position: absolute; height: 23px; width: 100%; background-color: #B6BFC6;">
+        <asp:Menu ID="Admin" runat="server" Style="top: 0px; position: absolute; height: 18px;
+            width: 600px; left: 26px;" DynamicHorizontalOffset="2" Font-Names="Times New Roman"
+            Font-Size="1.0em" Font-Bold="true" ForeColor="#405086" Orientation="Horizontal" StaticSubMenuIndent="10px">
+            <StaticSelectedStyle BackColor="#B6BFC6" />
+            <StaticMenuItemStyle HorizontalPadding="15px" VerticalPadding="2px" />
+            <DynamicHoverStyle BackColor="#B6BFC6" ForeColor="#405086" />
+            <DynamicMenuStyle BackColor="#B6BFC6" />
+            <DynamicSelectedStyle BackColor="#B6BFC6" />
+            <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+            <StaticHoverStyle BackColor="#B6BFC6" ForeColor="405086" />
+            <Items>
+                <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/Home/frmHome.aspx"></asp:MenuItem>
+                
+                <asp:MenuItem Text="Masters" Value="Masters">
+                    <asp:MenuItem NavigateUrl="~/MasterPages/TalukMaster.aspx" Text="Taluk Master" Value="Taluk Master"></asp:MenuItem>
+                    <asp:MenuItem Text="Scheme Master" Value="Taluk" NavigateUrl="~/MasterPages/SchemeMaster.aspx"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/MasterPages/SeriesYearMaster.aspx" Text="SeriesYear Master" Value="SeriesYear Master"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/MasterPages/DeptMaster.aspx" Text="Department Master" Value="Department Master"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/MasterPages/WorkMaster.aspx" Text="Nature Of Work" Value="Nature Of Work"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/MasterPages/SourceFundMaster.aspx" Text="Source of Fund" Value="Source of Fund"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/MasterPages/EnggMaster.aspx" Text="Engineer Incharge" Value="Engineer Incharge"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/MasterPages/GpsOperator.aspx" Text="GPS Operator" Value="GPs Operator"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/MasterPages/UserMaster.aspx" Text="User Master" Value="User Master"></asp:MenuItem>
+                </asp:MenuItem>
+                
+                <asp:MenuItem Text="Works" Value="New Item">
+                    <asp:MenuItem NavigateUrl="~/Entry/frmAdd.aspx" Text="Add" Value="Add"></asp:MenuItem>
+                    <asp:MenuItem Text="Modify" Value="Modify" NavigateUrl="~/Entry/frmModify.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Block" Value="Block" NavigateUrl="~/Entry/frmBlock.aspx"></asp:MenuItem></asp:MenuItem>
+                    
+                <%--<asp:MenuItem NavigateUrl="~/GPS/frmDataDownload.aspx" Text="GPS DataDownload" Value="GPS DataDownload"></asp:MenuItem>--%>
+                <asp:MenuItem NavigateUrl="~/GPS/frmViewGPS.aspx" Text="GPS Details" Value="GPS Details"></asp:MenuItem>
+                <asp:MenuItem Text="Release/Expenditure" Value="Release/Expenditure" NavigateUrl="~/Release/frmRelExp.aspx"></asp:MenuItem>
+            </Items>
+        </asp:Menu>
+        
+        <asp:Menu ID="GPS" runat="server" Style="top: 0px; position: absolute; height: 18px;
+            width: 300px; left: 26px;" DynamicHorizontalOffset="2" Font-Names="Times New Roman"
+            Font-Size="1.0em" Font-Bold="true" ForeColor="#405086" Orientation="Horizontal" StaticSubMenuIndent="10px">
+            <StaticSelectedStyle BackColor="#B6BFC6" />
+            <StaticMenuItemStyle HorizontalPadding="15px" VerticalPadding="2px" />
+            <DynamicHoverStyle BackColor="#B6BFC6" ForeColor="#405086" />
+            <DynamicMenuStyle BackColor="#B6BFC6" />
+            <DynamicSelectedStyle BackColor="#B6BFC6" />
+            <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+            <StaticHoverStyle BackColor="#B6BFC6" ForeColor="405086" />
+            <Items>
+                <asp:MenuItem NavigateUrl="~/GPS/frmDataDownload.aspx" Text="GPS DataDownload" Value="GPS DataDownload"></asp:MenuItem>
+            </Items>
+        </asp:Menu>
+        <asp:LinkButton ID="LinkButton1" ForeColor="#405086" runat="server" Style="position: absolute; left: 1160px" PostBackUrl="~/frmLogin.aspx">LogOut</asp:LinkButton>
+    </div>
+    <br />
+    <asp:ScriptManager ID="ajaxManager1" runat="server" AsyncPostBackTimeout="1200" EnablePageMethods="true">
+    </asp:ScriptManager>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

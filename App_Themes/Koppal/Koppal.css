@@ -1,0 +1,98 @@
+﻿.headerbg
+	{
+		width:1440px;
+		height:160px;
+		background-position:center;
+		background-image:url(../../images/templatemo_header_bg_wrapper.jpg);
+	}
+
+.headermenu
+	{
+		top: 136px; 
+		left:700px;
+		position: absolute; 
+		height: 23px; 
+		width: 10%; 
+		background-color: #B6BFC6;
+	}
+
+.headertxt
+	{
+		top: 117px; 
+		left:730px;
+		position: absolute; 
+		height: 23px; 
+		width: 10%;
+	}
+	
+.templatemo_site_title_bar_wrapper
+{
+  background-image: url(images/templatemo_header_bg_wrapper.jpg);	
+  background-position:center;
+}
+
+.title
+{
+	font-family: Arial Unicode MS;
+	color: navy;
+	text-align: center;
+	font-size: 18pt;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.BtnColor
+{
+	color:Gray;
+	background-image: nothing;
+}
+.grid_header
+{
+	
+	background-repeat: repeat-x; 
+	height: 24px;
+	line-height: 20px;
+	color: white;
+	background-color :#405086;
+	font-size: 12pt;
+	font-weight:normal;
+	text-align: left;
+}
+
+.odd_row
+{
+	background-color:White;
+	font-family:Arial;
+	font-size:13pt;
+	text-align: left;
+
+
+}
+.even_row
+{
+	background-color: Silver ;
+	text-align: left;
+	font-family:Arial;
+	font-size: 13pt;
+	
+}
+.Selected_Row
+{
+    background-color: #ffffff;
+   
+}
+
+.tablesty
+	{
+		position: relative; 
+		top: 0px; 
+		left: 0px;
+	}
+
+GridViewContainer
+    {
+          overflow: scroll;  
+          margin-bottom: 12px;     
+          width:560px;
+          height:743px;
+    }

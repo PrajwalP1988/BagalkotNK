@@ -1,0 +1,10 @@
+15/10/2015 08:56:54:PM ==> RGRHCl--> Screen Name:SubSchemeMaster --> Method: BindDropBankName()Could not find stored procedure 'Bgt_BindScheme'.
+15/10/2015 08:56:54:PM ==> RGRHCl--> Screen Name:SubSchemeMaster --> Method: BindDropBankName()Could not find stored procedure 'Bgt_BindSeries'.
+15/10/2015 08:56:55:PM ==> RGRHCl--> Screen Name:SubSchemeMaster --> Method: BindDepartment()Could not find stored procedure 'Bgt_BindDepartment'.
+15/10/2015 08:56:55:PM ==> RGRHCl--> Screen Name:SubSchemeMaster --> Method: BindWorkNature()Could not find stored procedure 'Bgt_BindNatureofWork'.
+15/10/2015 08:57:23:PM ==> RGRHCl--> Screen Name:SubSchemeMaster --> Method: BindDropBankName()Could not find stored procedure 'Bgt_BindScheme'.
+15/10/2015 08:57:23:PM ==> RGRHCl--> Screen Name:SubSchemeMaster --> Method: BindDropBankName()Could not find stored procedure 'Bgt_BindSeries'.
+15/10/2015 08:57:23:PM ==> RGRHCl--> Screen Name:SubSchemeMaster --> Method: BindDepartment()Could not find stored procedure 'Bgt_BindDepartment'.
+15/10/2015 08:57:23:PM ==> RGRHCl--> Screen Name:SubSchemeMaster --> Method: BindWorkNature()Could not find stored procedure 'Bgt_BindNatureofWork'.
+15/10/2015 08:57:50:PM ==> RGRHCl--> Screen Name:schememaster Method:Page_Load(): '
+15/10/2015 08:57:53:PM ==> RGRHCl--> Screen Name:schememaster Method:Page_Load(): '
